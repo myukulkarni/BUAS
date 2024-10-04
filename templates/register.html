@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="{% static '/style.css' %}">
+</head>
+<body>
+    <div  class="form-container1">
+        <h2>Register</h2>
+        <form method="POST" action="">
+            {% csrf_token %}
+            <div class="form-row">
+                <div class="input-box">
+                    <input type="text" name="username" placeholder="Username" required>
+                </div>
+                <div class="input-box">
+                    <input type="text" name="first_name" placeholder="First Name" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-box">
+                    <input type="text" name="last_name" placeholder="Last Name" required>
+                </div>
+                <div class="input-box">
+                    <input type="text" name="email" placeholder="email" required>
+                </div>
+                 <div class="input-box">
+                    <input type="text" name="contact_no" placeholder="Contact No" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-box">
+                    <input type="date" name="date_of_birth" placeholder="Date of Birth" required>
+                </div>
+                <div class="input-box">
+                    <input type="text" name="educational_status" placeholder="Educational Status" required>
+                </div>
+
+            </div>
+            <div class="form-row">
+                <div class="input-box">
+                    <input type="text" name="university" placeholder="University" required>
+                </div>
+                <div class="input-box">
+                    <input type="text" name="residential_adress" placeholder="Residential Address" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-box">
+                    <label>Gender:</label>
+                    <div class="gender-options">
+                        <label><input type="radio" name="gender" value="male" required> Male</label>
+                        <label><input type="radio" name="gender" value="female" required> Female</label>
+                        <label><input type="radio" name="gender" value="other" required> Other</label>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-box">
+                    <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+                </div>
+            </div>
+            <div class="button-group">
+                <button type="submit" class="btn">Register</button></div>
+                <div class="button-group"> 
+                <button type="button" class="btn" id="verify-otp">Verify OTP</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
