@@ -1,2 +1,2 @@
 # BUAS
-Basic user authentication model system
+Basic user authentication model system using django
